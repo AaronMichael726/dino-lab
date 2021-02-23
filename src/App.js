@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import Comments from './comments'
 
 function App() {
+  //stored variables
+  const name = 'aaron'
+  const post = {
+    title: 'Dinosaurs are awesome',
+    author: 'Aaron Hernandez',
+    body: 'Check out this body property!',
+    comments: [
+      'first',
+      'second',
+      'third'
+    ]
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>{post.title}</h1>
+      <h2>By: {post.author}</h2>
+      <p>{post.body}</p>
+      <Comments />
+      <p>{name}</p>
     </div>
   );
 }
